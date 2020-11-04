@@ -198,7 +198,8 @@ module.exports = function(app, callback) {
 							error: model.pa11yLog(task.id),
 							info: model.pa11yLog(task.id),
 							log: model.pa11yLog(task.id)
-						}
+						},
+						runners: app.config.runners || ['htmlcs']
 					};
 
 					// eslint-disable-next-line dot-notation

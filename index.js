@@ -31,6 +31,7 @@ app(config, (error, initialisedApp) => {
 	console.log(grey('uri:      %s'), initialisedApp.server.info.uri);
 	console.log(grey('database: %s'), config.database);
 	console.log(grey('cron:     %s'), config.cron);
+	console.log(grey('runner:   %s'), config.runner);
 
 	if (error) {
 		console.error('');
