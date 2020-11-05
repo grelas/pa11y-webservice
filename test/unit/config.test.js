@@ -28,6 +28,7 @@ describe('config', () => {
 		host: 'config-file-host',
 		port: 1000,
 		cron: 'config-fille-cron',
+		runners: ['config-file-runners'],
 		numWorkers: 2,
 		chromeLaunchConfig: {
 			field: 'value'
@@ -68,6 +69,7 @@ describe('config', () => {
 				assert.strictEqual(config.cron, mockConfig.cron);
 				assert.strictEqual(config.numWorkers, mockConfig.numWorkers);
 				assert.deepEqual(config.chromeLaunchConfig, mockConfig.chromeLaunchConfig);
+				assert.deepEqual(config.runners, mockConfig.runners);
 			});
 
 		});
@@ -94,6 +96,7 @@ describe('config', () => {
 				assert.strictEqual(config.cron, mockConfig.cron);
 				assert.strictEqual(config.numWorkers, mockConfig.numWorkers);
 				assert.deepEqual(config.chromeLaunchConfig, mockConfig.chromeLaunchConfig);
+				assert.deepEqual(config.runners, mockConfig.runners);
 			});
 		});
 	});
@@ -110,6 +113,7 @@ describe('config', () => {
 				assert.strictEqual(config.host, '0.0.0.0');
 				assert.strictEqual(config.port, 3000);
 				assert.strictEqual(config.cron, false);
+				assert.deepEqual(config.runners, ['htmlcs']);
 				assert.deepEqual(config.chromeLaunchConfig, {});
 			});
 		});
