@@ -118,6 +118,12 @@ The boot configurations for Pa11y Webservice are as follows. Look at the sample 
 
 This configuration option isn't available when you're using environment variables. [Use a JSON configuration file](https://github.com/pa11y/pa11y-webservice#option-2-using-config-files) if you need to pass these parameters.
 
+### runners
+
+Default: `["htmlcs"]`
+
+_(array<string>)_ A list of [runners](https://github.com/pa11y/pa11y#runners) pa11y uses when running accessibility reports.
+
 ### numWorkers
 *(number)* The concurrency limit or number of workers that will be running concurrently on each cron execution. Set via a config file or the `NUM_WORKERS` environment variable.
 
